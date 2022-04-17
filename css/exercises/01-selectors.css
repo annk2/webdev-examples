@@ -1,21 +1,51 @@
 /* CSS custom properties / CSS variables */
 
 :root {
-  --darkmagenta: #8b008b;
-  --magenta: #ff00ff;
-  --royalblue: #4169e1;
-  --teal: #008080;
-  --violet: #9400d3;
+	--darkmagenta: #8b008b;
+	--magenta: #ff00ff;
+	--royalblue: #4169e1;
+	--teal: #008080;
+	--violet: #9400d3;
 }
 
 /* Use attribute selectors for the first part of the exercise */
 
-li[class] {
-  color: var(--red);
+/* existence */
+
+/*li[class] {
+	color: var(--red);
+}*/
+
+li[id="cat"] {
+	color: var(--teal);
+}
+
+li[class^="p"] {
+	color: var(--green);
+}
+
+/*li[class*="do"] {
+	color: var(--royalblue);
+}*/
+
+li[class$="g"] {
+	color: var(--violet);
 }
 
 /* Use descendant, child, and sibling selectors for the second part */
 
+/* descendant */
+/* can hover over to see specificity */
 section li {
-  color: var(--green);
+	color: var(--green);
+}
+
+/* all siblings? */
+.first ~ li {
+	color: var(--violet);
+}
+
+/* only next */
+.second + li {
+	color: var(--royalblue);
 }
