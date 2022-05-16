@@ -34,7 +34,7 @@ $(document).ready(() => {
 			type: "GET",
 			url: url,
 			success: (data) => {
-				//console.log(data);
+				console.log(typeof data);
 
 				data.forEach((item) => {
 					console.log(item.name);
